@@ -32,3 +32,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# sub folders
+/*/.next
+/*/.gitignore
+/*/node_modules
+/*/README.md
