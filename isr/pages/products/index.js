@@ -24,6 +24,8 @@ export default ProductList
 
 
 export async function getStaticProps() {
+
+  console.log("generating / regenearting product list page")
   const response = await fetch('http://localhost:4000/products')
   const data = await response.json()
 
@@ -32,6 +34,7 @@ export async function getStaticProps() {
     props: {
       // products: data.slice(0, 3)
       products: data   // Lasy Loading kind of
-    }
+    },
+    revalidate: 10  // asking nextjs to revalidate product list page in every 10 sec
   }
 }
