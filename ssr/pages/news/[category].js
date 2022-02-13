@@ -21,7 +21,10 @@ function ArticleListByCategory({articles, category}) {
 export default ArticleListByCategory
 
 export async function getServerSideProps(context) {
-  const { params, req, res } = context
+  const { params, req, res, query } = context
+
+  console.log(req)
+  console.log(query)
 
   // set cookies
   res.setHeader('Set-Cookie', ['name=kanish'])
