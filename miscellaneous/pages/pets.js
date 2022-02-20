@@ -1,5 +1,5 @@
 // import Image from 'next/image'
-import pet1 from '../public/pets/pet1.jpg'
+import pet1 from '/public/pets/pet1.jpg'
 
 function Pets() {
   return (
